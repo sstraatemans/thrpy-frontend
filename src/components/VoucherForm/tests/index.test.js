@@ -3,7 +3,7 @@ import { mount, shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 import VoucherForm from "./../";
 
-describe("<VoucherForm />", () => {
+xdescribe("<VoucherForm />", () => {
   it("render component <VoucherForm>", () => {
     const wrapper = mount(<VoucherForm />);
 

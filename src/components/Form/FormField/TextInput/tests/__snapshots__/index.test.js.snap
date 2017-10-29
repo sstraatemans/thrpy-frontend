@@ -1,10 +1,19 @@
 exports[`<TextInput /> render component <TextInput> 1`] = `
 <TextInput>
-  <styled.input
-    type="text">
-    <input
-      className="sc-bdVaJa cZVJwy"
-      type="text" />
-  </styled.input>
+  <div>
+    <styled.input
+      hasPlaceholder={false}
+      required="required"
+      type="text">
+      <input
+        className="sc-bdVaJa alSZz"
+        required="required"
+        type="text" />
+    </styled.input>
+    <styled.span>
+      <span
+        className="sc-bwzfXH eLKYQt" />
+    </styled.span>
+  </div>
 </TextInput>
 `;

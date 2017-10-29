@@ -3,7 +3,7 @@ import { mount, shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 import Button from "./../";
 
-describe("<Button />", () => {
+xdescribe("<Button />", () => {
   it("render component <Button>", () => {
     const wrapper = mount(<Button />);
 
