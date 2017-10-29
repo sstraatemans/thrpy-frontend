@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Form from "./../Form";
 import TextInput from "./../Form/FormField/TextInput";
 import Button from "./../Form/Button";
+import StyledCheckBox from "./../Form/FormField/CheckBox";
 import { ButtonBar } from "./../Form/Button/style";
 
 type Props = {};
@@ -45,6 +46,7 @@ class VoucherForm extends Component<Props, State> {
         <TextInput
           label="First name"
           name="firstName"
+          value="steven"
           validation={{
             minLength: 2,
             isAlphaOnly: true
@@ -67,6 +69,7 @@ class VoucherForm extends Component<Props, State> {
             isEmail: true
           }}
         />
+        <StyledCheckBox value="true">wefswf</StyledCheckBox>
 
         <ButtonBar>
           <Button label="Get offer" isLoading={this.state.isLoading} />

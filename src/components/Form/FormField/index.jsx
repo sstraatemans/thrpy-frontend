@@ -11,7 +11,8 @@ type Props = {
   validationRules?: Object,
   validationMessage?: string,
   attachFormField?: (field: any) => void, //this should be fixed!!! is required
-  detachFormField?: (field: any) => void
+  detachFormField?: (field: any) => void,
+  value: any
 };
 
 type State = {
@@ -37,7 +38,7 @@ const FormField = (InputFieldComponent: React.ComponentType<any>) => {
       super(props);
       this.state = {
         isValidationError: false,
-        val: false,
+        val: props.value,
         hasFocus: false
       };
 

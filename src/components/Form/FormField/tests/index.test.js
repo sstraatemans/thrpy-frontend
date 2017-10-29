@@ -7,7 +7,7 @@ import FormField from "./../";
 configure({ adapter: new Adapter() });
 let props;
 
-xdescribe("FormField", () => {
+describe("FormField", () => {
   beforeAll(() => {
     props = {
       name: "firstname",
@@ -16,17 +16,8 @@ xdescribe("FormField", () => {
     };
   });
 
-  xit("renders without crashing", () => {
+  it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(<FormField {...props} />, div);
-  });
-
-  xit("renders the label name", () => {
-    //const field = shallow(<FormField {...props} />);
-    const div = document.createElement("div");
-    ReactDOM.render(<FormField {...props} />, div);
-    const label = div.querySelector("label");
-    const text = label.innerHTML;
-    expect(text).toBe(props.label);
   });
 });

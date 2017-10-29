@@ -1,9 +1,9 @@
 import React from "react";
 import { mount, shallow } from "enzyme";
 import toJson from "enzyme-to-json";
-import { UnWrapped } from "./../";
+import { UnWrapped, StyledCheckBox } from "./../";
 
-xdescribe("<StyledCheckBox />", () => {
+describe("<StyledCheckBox />", () => {
   it("render component <UnWrapped>", () => {
     let props = {
       name: "terms",

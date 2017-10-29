@@ -5,32 +5,32 @@ exports[`<StyledCheckBox /> render component <UnWrapped> 1`] = `
   val={true}>
   <styled.div>
     <div
-      className="sc-bxivhb bUZGRr">
-      <styled.input
-        checked="checked"
-        id="terms"
-        name="terms"
-        onChange={[Function]}
-        type="checkbox">
-        <input
-          checked="checked"
-          className="sc-ifAKCX hhaAvU"
-          id="terms"
-          name="terms"
-          onChange={[Function]}
-          type="checkbox" />
-      </styled.input>
+      className="sc-bxivhb eyxYjs">
       <styled.label
         htmlFor="terms"
         validationError="">
         <label
-          className="sc-bZQynM khFdTT"
+          className="sc-bZQynM jYCBXE"
           htmlFor="terms">
+          <styled.input
+            checked="checked"
+            id="terms"
+            name="terms"
+            onChange={[Function]}
+            type="checkbox">
+            <input
+              checked="checked"
+              className="sc-ifAKCX gcmtRL"
+              id="terms"
+              name="terms"
+              onChange={[Function]}
+              type="checkbox" />
+          </styled.input>
           <styled.span
             checked="checked">
             <span
               checked="checked"
-              className="sc-EHOje eZpNBI" />
+              className="sc-EHOje hyuYGb" />
           </styled.span>
         </label>
       </styled.label>
