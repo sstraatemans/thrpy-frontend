@@ -10,12 +10,17 @@
     "styled-components": "^2.2.1"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.13",
+    "@storybook/addon-links": "^3.2.13",
+    "@storybook/react": "^3.2.13",
+    "chai": "^4.1.2",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-15": "^1.0.0",
     "enzyme-adapter-react-16": "^1.0.2",
     "enzyme-to-json": "^3.1.4",
     "react-scripts": "0.9.5",
-    "react-test-renderer": "^16.0.0"
+    "react-test-renderer": "^16.0.0",
+    "storybook-addon-specifications": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,6 +28,8 @@
     "test": "react-scripts test --env=jsdom",
     "test-coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "flow": "flow"
+    "flow": "flow",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   }
 }

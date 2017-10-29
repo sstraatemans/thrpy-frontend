@@ -63,7 +63,11 @@ class Form extends React.Component<Props> {
         return child;
       }
     });
-    return <form onSubmit={this.handleSubmit}>{childrenWithProps}</form>;
+    return (
+      <form novalidate="novalidate" onSubmit={this.handleSubmit}>
+        {childrenWithProps}
+      </form>
+    );
   }
 }
 

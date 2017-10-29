@@ -3,7 +3,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { Container } from "./style";
 import VoucherForm from "./components/VoucherForm";
-import { theme } from "./theme";
+import { theme } from "./services/Theme";
 
 const App = () => (
   <ThemeProvider theme={theme}>

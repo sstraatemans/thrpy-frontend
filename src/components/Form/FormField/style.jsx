@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const InputFieldWrapper = styled.div`
-  padding: 10px 0;
-  width: 100%;
+  font-family: ${props => props.theme.fontFamily};
+  position: relative;
+  margin-top: 35px;
+  margin-bottom: 20px;
 `;
 
 export const FormFieldError = styled.div`
@@ -13,12 +15,14 @@ export const FormFieldError = styled.div`
 `;
 
 export const Label = styled.label`
-  display: block;
-  font-size: 20px;
-  margin-bottom: 10px;
-  ${props =>
-    props.validationError &&
-    `
-    color: ${props.theme.errorColor};
-  `};
+  color: ${props => props.theme.labelColor};
+  font-size: ${props => props.theme.fontSize};
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 `;

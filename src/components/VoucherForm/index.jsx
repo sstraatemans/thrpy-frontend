@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import Form from "./../Form";
 import TextInput from "./../Form/FormField/TextInput";
-import CheckBox from "./../Form/FormField/CheckBox";
 import Button from "./../Form/Button";
 import { ButtonBar } from "./../Form/Button/style";
 
@@ -45,10 +44,8 @@ class VoucherForm extends Component<Props, State> {
       <Form handleSubmit={this.handleSubmit}>
         <TextInput
           label="First name"
-          placeholder="Enter first name"
           name="firstName"
           validation={{
-            required: true,
             minLength: 2,
             isAlphaOnly: true
           }}
@@ -71,15 +68,6 @@ class VoucherForm extends Component<Props, State> {
           }}
         />
 
-        <CheckBox
-          name="terms"
-          validation={{
-            required: true
-          }}
-          validationMessage="You need to accept privacy settlement"
-        >
-          Accept <a href="#">privacy settlement</a>
-        </CheckBox>
         <ButtonBar>
           <Button label="Get offer" isLoading={this.state.isLoading} />
         </ButtonBar>

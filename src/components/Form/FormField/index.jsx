@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 import Validator from "./../../../services/Validator";
-import { InputFieldWrapper, FormFieldError, Label } from "./style";
+import { InputFieldWrapper, FormFieldError } from "./style";
 
 type Props = {
   name: string,
@@ -16,7 +16,8 @@ type Props = {
 
 type State = {
   isValidationError: boolean,
-  val: boolean
+  val: boolean,
+  hasFocus: boolean
 };
 
 const FormField = (InputFieldComponent: React.ComponentType<any>) => {
@@ -25,6 +26,7 @@ const FormField = (InputFieldComponent: React.ComponentType<any>) => {
     validationHandler: Function;
     validationMessage: string;
     changeHandler: Function;
+    focusHandler: Function;
     restProps: Object;
 
     static defaultProps = {
@@ -33,15 +35,16 @@ const FormField = (InputFieldComponent: React.ComponentType<any>) => {
 
     constructor(props: Props) {
       super(props);
-
       this.state = {
         isValidationError: false,
-        val: false
+        val: false,
+        hasFocus: false
       };
 
       this.Validator = new Validator();
       this.validationHandler = this.validationHandler.bind(this);
       this.changeHandler = this.changeHandler.bind(this);
+      this.focusHandler = this.focusHandler.bind(this);
     }
 
     componentWillMount() {
@@ -55,19 +58,6 @@ const FormField = (InputFieldComponent: React.ComponentType<any>) => {
       }
     }
 
-    renderLabel() {
-      if (this.props.label) {
-        return (
-          <Label
-            validationError={this.state.isValidationError ? "true" : ""}
-            htmlFor={this.props.name}
-          >
-            {this.props.label}
-          </Label>
-        );
-      }
-    }
-
     changeHandler(e: SyntheticEvent<any>) {
       let value = e.currentTarget.value;
       if (e.target.type === "checkbox") {
@@ -76,7 +66,12 @@ const FormField = (InputFieldComponent: React.ComponentType<any>) => {
       this.setState({ val: value });
     }
 
+    focusHandler() {
+      this.setState({ hasFocus: true });
+    }
+
     validationHandler() {
+      this.setState({ hasFocus: false });
       if (!this.props.validation) {
         return;
       }
@@ -106,15 +101,16 @@ const FormField = (InputFieldComponent: React.ComponentType<any>) => {
 
       return (
         <InputFieldWrapper>
-          {this.renderLabel()}
           <InputFieldComponent
             validationError={this.state.isValidationError ? "true" : ""}
             id={this.props.name}
             {...this.restProps}
             onChange={this.changeHandler}
+            onFocus={this.focusHandler}
             onBlur={this.validationHandler}
             val={this.state.val}
           />
+
           {this.showValidationError()}
         </InputFieldWrapper>
       );

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Label as BasicLabel } from "./../style";
 
 export const CheckBoxWrapper = styled.div``;
 export const CheckBox = styled.input`display: none;`;
@@ -9,7 +8,7 @@ export const CheckBoxBox = styled.span`
   display: inline-block;
   top: 5px;
   margin-right: 30px;
-  border: 1px solid #a0a0a0;
+  border: 1px solid ${props => props.theme.borderColor};
   background-color: #fbfbfb;
   width: 20px;
   height: 20px;
@@ -35,5 +34,3 @@ export const CheckBoxBox = styled.span`
       `};
   }
 `;
-
-export const Label = BasicLabel.extend`font-size: 14px;`;
