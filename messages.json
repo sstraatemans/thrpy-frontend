@@ -1,0 +1,7 @@
+[
+  {
+    "id": "Header.greeting",
+    "defaultMessage": "Welcome to your dashboard, {name}!",
+    "filepath": "./src/components/VoucherForm/index.jsx"
+  }
+]

@@ -1,8 +1,8 @@
 // @flow
 import React from "react";
 import { Input, InputFieldBar } from "./style";
-import { Label } from "./../style";
-import FormField from "./../../FormField";
+import { Label } from "./../../style";
+import FormField from "./../../";
 
 type Props = {
   validationError: boolean,

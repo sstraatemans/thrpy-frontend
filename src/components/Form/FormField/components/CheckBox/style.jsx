@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Label } from "./../style";
+import { Label } from "./../../style";
 
 export const CheckBoxWrapper = styled.div`margin-bottom: -20px;`;
 export const CheckBox = styled.input`

@@ -1,10 +1,12 @@
 // @flow
 import React, { Component } from "react";
+import { FormattedMessage } from "react-intl";
 import Form from "./../Form";
-import TextInput from "./../Form/FormField/TextInput";
-import Button from "./../Form/Button";
-import StyledCheckBox from "./../Form/FormField/CheckBox";
-import { ButtonBar } from "./../Form/Button/style";
+import TextInput from "./../Form/FormField/components/TextInput";
+import Button from "./../Button";
+import StyledCheckBox from "./../Form/FormField/components/CheckBox";
+import StyledRadioButton from "./../Form/FormField/components/RadioButton";
+import { ButtonBar } from "./../Button/style";
 
 type Props = {};
 type State = {
@@ -42,7 +44,12 @@ class VoucherForm extends Component<Props, State> {
 
   render() {
     return (
-      <Form handleSubmit={this.handleSubmit}>
+      <div>
+        <FormattedMessage
+          id={"Header.greeting"}
+          defaultMessage={"Welcome to your dashboard, {name}!"}
+          values={{ name: "steven" }}
+        />
         <TextInput
           label="First name"
           name="firstName"
@@ -52,29 +59,7 @@ class VoucherForm extends Component<Props, State> {
             isAlphaOnly: true
           }}
         />
-        <TextInput
-          label="Surname"
-          placeholder="Enter surname"
-          name="lastName"
-          validation={{
-            required: true
-          }}
-        />
-        <TextInput
-          label="Email address"
-          placeholder="Enter your e-mail address"
-          name="email"
-          validation={{
-            required: true,
-            isEmail: true
-          }}
-        />
-        <StyledCheckBox value="true">wefswf</StyledCheckBox>
-
-        <ButtonBar>
-          <Button label="Get offer" isLoading={this.state.isLoading} />
-        </ButtonBar>
-      </Form>
+      </div>
     );
   }
 }

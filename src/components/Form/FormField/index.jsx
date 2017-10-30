@@ -17,7 +17,7 @@ type Props = {
 
 type State = {
   isValidationError: boolean,
-  val: boolean,
+  val: any,
   hasFocus: boolean
 };
 
@@ -60,9 +60,13 @@ const FormField = (InputFieldComponent: React.ComponentType<any>) => {
     }
 
     changeHandler(e: SyntheticEvent<any>) {
+      console.log(e.target.type);
       let value = e.currentTarget.value;
       if (e.target.type === "checkbox") {
         value = e.currentTarget.checked;
+      }
+      if (e.target.type === "radio") {
+        value = e.currentTarget.selected;
       }
       this.setState({ val: value });
     }

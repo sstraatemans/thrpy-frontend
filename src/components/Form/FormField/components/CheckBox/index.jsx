@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import { CheckBoxWrapper, CheckBox, CheckBoxBox, CheckboxLabel } from "./style";
-import FormField from "./../../FormField";
+import FormField from "./../../";
 
 type Props = {
   validationError: boolean,
