@@ -1,13 +1,26 @@
 // @flow
 import React from "react";
-import { StyledButton } from "./style";
+import { StyledButton, FlatButton } from "./style";
+
+export const ButtonTypes = {
+  Normal: "Normal",
+  Flat: "Flat"
+};
+type ButtonType = $Keys<typeof ButtonTypes>;
 
 type Props = {
-  children: Array<any>
+  onClick: Function,
+  style?: ButtonType,
+  children: any
 };
 
+const defaultProps = { style: "Normal" };
+
 const Button = (props: Props) => {
-  return <StyledButton>{props.children}</StyledButton>;
+  if (props.style === ButtonTypes.Flat) {
+    return <FlatButton onClick={props.onClick}>{props.children}</FlatButton>;
+  }
+  return <StyledButton onClick={props.onClick}>{props.children}</StyledButton>;
 };
 
 export default Button;

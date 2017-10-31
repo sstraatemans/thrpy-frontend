@@ -50,6 +50,7 @@ class VoucherForm extends Component<Props, State> {
           defaultMessage={"Welcome to your dashboard, {name}!"}
           values={{ name: "steven" }}
         />
+
         <TextInput
           label="First name"
           name="firstName"

@@ -1,0 +1,50 @@
+exports[`<Modal /> render component <Modal> 1`] = `
+<Modal>
+  <styled.div>
+    <div
+      className="sc-htpNat ktprKK">
+      <styled.div>
+        <div
+          className="sc-bxivhb iuNRCJ">
+          <styled.h4>
+            <h4
+              className="sc-EHOje flMdcs">
+              This is a title
+            </h4>
+          </styled.h4>
+          his is text
+        </div>
+      </styled.div>
+      <styled.div>
+        <div
+          className="sc-ifAKCX jlvqiv">
+          <Button
+            onClick={undefined}
+            style="Flat">
+            <styled.a
+              onClick={undefined}>
+              <a
+                className="sc-bZQynM jwYwAf"
+                onClick={undefined}>
+                Cancel
+              </a>
+            </styled.a>
+          </Button>
+          <Button
+            onClick={undefined}
+            style="Flat">
+            <styled.a
+              onClick={undefined}>
+              <a
+                className="sc-bZQynM jwYwAf"
+                onClick={undefined}>
+                Ok
+              </a>
+            </styled.a>
+          </Button>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</Modal>
+`;

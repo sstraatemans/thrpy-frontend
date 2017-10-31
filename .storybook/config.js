@@ -6,7 +6,9 @@ import { theme } from "./../src/services/Theme";
 
 addDecorator(story => (
   <div style={{ margin: "0 40px" }}>
-    <ThemeProvider theme={theme}>{story()}</ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <Container>{story()}</Container>
+    </ThemeProvider>
   </div>
 ));
 

@@ -27,3 +27,9 @@ export const StyledButton = styled.a`
 
 
 `;
+
+export const FlatButton = StyledButton.extend`
+  box-shadow: none;
+  background-color: transparent;
+  color: #343434;
+`;
