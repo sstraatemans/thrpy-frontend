@@ -69,6 +69,13 @@ export const StyledModal = styled.div`
   animation-play-state: running;
 
   ${props =>
+    props.hasFixedFooter &&
+    `
+    padding: 0;
+    height: 70%;
+  `};
+
+  ${props =>
     props.isOpen &&
     !props.isClosing &&
     `
@@ -90,7 +97,19 @@ export const StyledModal = styled.div`
   `};
 `;
 
-export const ModalContent = styled.div`padding: 24px;`;
+export const ModalContent = styled.div`
+  padding: 24px;
+
+  ${props =>
+    props.hasFixedFooter &&
+    `
+    position: absolute;
+    height: calc(100% - 56px);
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    `};
+`;
 
 export const ModalFooter = styled.div`
   border-radius: 0 0 2px 2px;
@@ -103,6 +122,14 @@ export const ModalFooter = styled.div`
   a {
     margin: 6px 0;
   }
+
+  ${props =>
+    props.hasFixedFooter &&
+    `
+    border-top: 1px solid ${props.theme.borderColor};
+    position: absolute;
+    bottom: 0;
+  `};
 `;
 
 export const ModalTitle = H4.extend``;

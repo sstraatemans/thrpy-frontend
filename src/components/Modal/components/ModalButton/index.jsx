@@ -36,7 +36,11 @@ class ModalButton extends Component<Props, State> {
   renderModal() {
     if (this.state.isOpen) {
       return (
-        <Modal onDismiss={this.dismissHandler} onOk={this.dismissHandler}>
+        <Modal
+          hasFixedFooter={true}
+          onDismiss={this.dismissHandler}
+          onOk={this.dismissHandler}
+        >
           {this.props.children}
         </Modal>
       );

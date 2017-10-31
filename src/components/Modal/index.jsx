@@ -11,7 +11,7 @@ import {
 import Button, { ButtonTypes } from "./../Button";
 
 type Props = {
-  isOpen: boolean,
+  hasFixedFooter?: boolean,
   onDismiss: Function,
   onOk: Function,
   children: Array<any>
@@ -60,12 +60,13 @@ class Modal extends Component<Props, State> {
           }}
           isClosing={this.state.isClosing}
           isOpen="true"
+          hasFixedFooter={this.props.hasFixedFooter}
         >
-          <ModalContent>
+          <ModalContent hasFixedFooter={this.props.hasFixedFooter}>
             <ModalTitle>This is a title</ModalTitle>
             {this.props.children}
           </ModalContent>
-          <ModalFooter>
+          <ModalFooter hasFixedFooter={this.props.hasFixedFooter}>
             <Button onClick={this.handleDismiss} style={ButtonTypes.Flat}>
               Cancel
             </Button>
