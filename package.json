@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.16.2",
     "flow-bin": "^0.57.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-intl": "^2.4.0",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.8",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "styled-components": "^2.2.1"
   },
   "devDependencies": {
@@ -26,6 +31,7 @@
     "storybook-addon-specifications": "^2.1.1"
   },
   "scripts": {
+    "startserver": "react-scripts start && babel-node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

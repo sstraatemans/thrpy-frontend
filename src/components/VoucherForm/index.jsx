@@ -8,6 +8,10 @@ import StyledCheckBox from "./../Form/FormField/components/CheckBox";
 import StyledRadioButton from "./../Form/FormField/components/RadioButton";
 import { ButtonBar } from "./../Button/style";
 
+import { push } from "react-router-redux";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+
 type Props = {};
 type State = {
   firstName: string,
@@ -65,4 +69,12 @@ class VoucherForm extends Component<Props, State> {
   }
 }
 
-export default VoucherForm;
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      changePage: () => push("/about-us")
+    },
+    dispatch
+  );
+
+export default connect(null, mapDispatchToProps)(VoucherForm);
