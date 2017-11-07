@@ -3,10 +3,11 @@ import { H4 } from "./../../style";
 
 export const CardContainer = styled.div`
   position: relative;
-  margin: 0.5rem 0 1rem 0;
   background-color: #fff;
   box-shadow: ${props => props.theme.boxShadow}
   border-radius: 2px;
+
+  text-align: left;
 `;
 
 export const CardContent = styled.div`

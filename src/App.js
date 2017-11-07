@@ -1,11 +1,11 @@
 // @flow
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { Container } from "./style";
 import Register from "./scenes/Register";
 import TakePhoto from "./components/TakePhoto";
 import { theme } from "./services/Theme";
 import { Route, Link } from "react-router-dom";
+import { Grid } from "react-styled-flexboxgrid";
 
 import { IntlProvider, addLocaleData } from "react-intl";
 import en from "react-intl/locale-data/en";
@@ -20,10 +20,10 @@ const messages = localeData.en;
 const App = () => (
   <ThemeProvider theme={theme}>
     <IntlProvider locale="en" messages={messages}>
-      <Container>
+      <Grid>
         <Route exact path="/" component={Register} />
         <Route exact path="/scanner" component={TakePhoto} />
-      </Container>
+      </Grid>
     </IntlProvider>
   </ThemeProvider>
 );
