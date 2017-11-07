@@ -70,7 +70,7 @@ class Modal extends Component<Props, State> {
             <Button onClick={this.handleDismiss} style={ButtonTypes.Flat}>
               Cancel
             </Button>
-            <Button onClick={this.props.onOk} style={ButtonTypes.Flat}>
+            <Button onClick={this.handleDismiss} style={ButtonTypes.Flat}>
               Ok
             </Button>
           </ModalFooter>

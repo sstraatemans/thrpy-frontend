@@ -1,8 +1,5 @@
 import React from "react";
-
 import ReactDOM from "react-dom";
-import { mount, shallow } from "enzyme";
-import toJson from "enzyme-to-json";
 import { UnWrapped } from "./../";
 
 let props = "";

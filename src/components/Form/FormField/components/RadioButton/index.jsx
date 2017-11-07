@@ -9,14 +9,13 @@ import {
 
 type Props = {
   name: string,
-  onChange: Function,
+  changeHandler: Function,
   children: Array<any>,
   val: any,
   selected: string
 };
 
 const StyledRadioButton = (props: Props) => {
-  console.log(props);
   return (
     <RadioButtonWrapper>
       <RadioButtonLabel

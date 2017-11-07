@@ -63,7 +63,7 @@ export const StyledModal = styled.div`
 
   box-shadow: ${props => props.theme.boxShadow};
   transform: scale(0.7, 1.2);
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
   animation-play-state: running;

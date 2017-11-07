@@ -1,4 +1,25 @@
-import { configure } from "enzyme";
+import "raf/polyfill";
+import storage from "jest-localstorage-mock";
+import Enzyme, { shallow, render, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import toJson from "enzyme-to-json";
 
-configure({ adapter: new Adapter() });
+// React 16 Enzyme adapter
+Enzyme.configure({ adapter: new Adapter() });
+
+// Make Enzyme functions available in all test files without importing
+global.shallow = shallow;
+global.render = render;
+global.mount = mount;
+global.toJson = toJson;
+global.storage = storage;
+
+//mock the random
+const mockMath = Object.create(global.Math);
+mockMath.random = () => 0.5;
+global.Math = mockMath;
+
+// Fail tests on any warning
+console.error = message => {
+  throw new Error(message);
+};

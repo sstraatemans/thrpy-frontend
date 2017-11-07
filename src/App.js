@@ -2,8 +2,8 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import { Container } from "./style";
-import VoucherForm from "./components/VoucherForm";
-import Scanner from "./components/Scanner";
+import Register from "./scenes/Register";
+import TakePhoto from "./components/TakePhoto";
 import { theme } from "./services/Theme";
 import { Route, Link } from "react-router-dom";
 
@@ -16,18 +16,13 @@ addLocaleData([...en, ...nl]);
 // Try full locale, try locale without region code, fallback to 'en'
 //const messages = localeData[languageWithoutRegionCode] || localeData[language] || localeData.en;
 const messages = localeData.en;
-console.log(messages);
 
 const App = () => (
   <ThemeProvider theme={theme}>
     <IntlProvider locale="en" messages={messages}>
       <Container>
-        <header>
-          <Link to="/">Home</Link>
-          <Link to="/scanner">Scanner</Link>
-        </header>
-        <Route exact path="/" component={VoucherForm} />
-        <Route exact path="/scanner" component={Scanner} />
+        <Route exact path="/" component={Register} />
+        <Route exact path="/scanner" component={TakePhoto} />
       </Container>
     </IntlProvider>
   </ThemeProvider>

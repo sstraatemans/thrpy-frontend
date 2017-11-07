@@ -4,6 +4,7 @@ import { FormattedMessage } from "react-intl";
 import Form from "./../Form";
 import TextInput from "./../Form/FormField/components/TextInput";
 import Button from "./../Button";
+import Card from "./../Card";
 import StyledCheckBox from "./../Form/FormField/components/CheckBox";
 import StyledRadioButton from "./../Form/FormField/components/RadioButton";
 import { ButtonBar } from "./../Button/style";
@@ -49,6 +50,7 @@ class VoucherForm extends Component<Props, State> {
   render() {
     return (
       <div>
+        <Card />
         <FormattedMessage
           id={"Header.greeting"}
           defaultMessage={"Welcome to your dashboard, {name}!"}

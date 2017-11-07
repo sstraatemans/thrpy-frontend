@@ -1,0 +1,9 @@
+exports[`<Background /> render component <Background> 1`] = `
+<Background>
+  <styled.div
+    img="images/back/11.jpg">
+    <div
+      className="sc-bdVaJa ejQozR" />
+  </styled.div>
+</Background>
+`;

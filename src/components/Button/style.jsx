@@ -21,11 +21,8 @@ export const StyledButton = styled.a`
   line-height: 36px;
   text-transform: uppercase;
   user-select: none;
-  box-shadow: props => props.theme.boxShadow</1>
-  transition: .3s ease-out;
-}
-
-
+  box-shadow: ${props => props.theme.boxShadow};
+  transition: 0.3s ease-out;
 `;
 
 export const FlatButton = StyledButton.extend`

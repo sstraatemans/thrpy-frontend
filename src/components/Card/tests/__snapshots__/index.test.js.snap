@@ -1,0 +1,38 @@
+exports[`<Background /> render component <Background> 1`] = `
+<Card>
+  <styled.div>
+    <div
+      className="sc-htpNat gUdnOv">
+      <styled.div>
+        <div
+          className="sc-bxivhb dqQpey">
+          <p />
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</Card>
+`;
+
+exports[`<Card /> render component <Card> 1`] = `
+<Card
+  title="title goes here">
+  <styled.div>
+    <div
+      className="sc-htpNat gUdnOv">
+      <styled.div>
+        <div
+          className="sc-bxivhb dqQpey">
+          <styled.h4>
+            <h4
+              className="sc-ifAKCX iRjmoV">
+              title goes here
+            </h4>
+          </styled.h4>
+          <p />
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</Card>
+`;

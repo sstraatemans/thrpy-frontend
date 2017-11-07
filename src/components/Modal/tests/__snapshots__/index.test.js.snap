@@ -2,46 +2,62 @@ exports[`<Modal /> render component <Modal> 1`] = `
 <Modal>
   <styled.div>
     <div
-      className="sc-htpNat ktprKK">
-      <styled.div>
+      className="sc-htpNat KtFsv">
+      <styled.div
+        isClosing={false}
+        isOpen="true">
         <div
-          className="sc-bxivhb iuNRCJ">
-          <styled.h4>
-            <h4
-              className="sc-EHOje flMdcs">
-              This is a title
-            </h4>
-          </styled.h4>
-          his is text
-        </div>
+          className="sc-bxivhb jjCBzm" />
       </styled.div>
-      <styled.div>
+      <styled.div
+        hasFixedFooter={undefined}
+        innerRef={[Function]}
+        isClosing={false}
+        isOpen="true">
         <div
-          className="sc-ifAKCX jlvqiv">
-          <Button
-            onClick={undefined}
-            style="Flat">
-            <styled.a
-              onClick={undefined}>
-              <a
-                className="sc-bZQynM jwYwAf"
-                onClick={undefined}>
-                Cancel
-              </a>
-            </styled.a>
-          </Button>
-          <Button
-            onClick={undefined}
-            style="Flat">
-            <styled.a
-              onClick={undefined}>
-              <a
-                className="sc-bZQynM jwYwAf"
-                onClick={undefined}>
-                Ok
-              </a>
-            </styled.a>
-          </Button>
+          className="sc-ifAKCX jzdXId">
+          <styled.div
+            hasFixedFooter={undefined}>
+            <div
+              className="sc-EHOje esODbU">
+              <styled.h4>
+                <h4
+                  className="sc-gzVnrw haYQxP">
+                  This is a title
+                </h4>
+              </styled.h4>
+            </div>
+          </styled.div>
+          <styled.div
+            hasFixedFooter={undefined}>
+            <div
+              className="sc-bZQynM eAuywG">
+              <Button
+                onClick={[Function]}
+                style="Flat">
+                <styled.a
+                  onClick={[Function]}>
+                  <a
+                    className="sc-dnqmqq hmgyUI"
+                    onClick={[Function]}>
+                    Cancel
+                  </a>
+                </styled.a>
+              </Button>
+              <Button
+                onClick={[Function]}
+                style="Flat">
+                <styled.a
+                  onClick={[Function]}>
+                  <a
+                    className="sc-dnqmqq hmgyUI"
+                    onClick={[Function]}>
+                    Ok
+                  </a>
+                </styled.a>
+              </Button>
+            </div>
+          </styled.div>
         </div>
       </styled.div>
     </div>
